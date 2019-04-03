@@ -1,0 +1,29 @@
+{
+  "name": "Personal Note",
+  "description": "we can save simple note.",
+  "version": "1.0",
+  "author": "Ramesh Vaniya",
+
+  "icons": {
+    "64": "icons/icon64x64.png"
+  }, 
+  "browser_action": {
+        "default_title": "Personal Note",
+        "default_icon": {
+          "64": "icons/icon64x64.png"
+        },  
+    "default_popup": "option.html"
+  },
+    "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "css": ["styles/style.css"],
+      "run_at": "document_start"
+    }
+  ],
+  "permissions": [
+    "activeTab",
+    "storage"
+  ],
+  "manifest_version": 2
+}

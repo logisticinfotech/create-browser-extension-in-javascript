@@ -1,0 +1,262 @@
+@media (min-width: 1200px)
+{
+  .note-container .container {
+      max-width: 1140px;
+  }
+}
+@media (min-width: 992px)
+.note-container .container {
+    max-width: 960px;
+}
+@media (min-width: 768px)
+.note-container .container {
+    max-width: 720px;
+}
+@media (min-width: 576px)
+.note-container .container {
+    max-width: 540px;
+}
+.note-container
+{
+    padding: 10px;
+    margin: 0px;
+    min-width: 500px;
+    background: linear-gradient(to right, rgb(17, 153, 142), rgb(56, 239, 125));
+}
+
+.note-container .container {
+    /*margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;*/
+    padding: 0px;
+    margin: 0px;
+    width: 100%;
+}
+
+.note-container .row {
+    margin: 30px 0;
+}
+
+.note-container input.form-control {
+    height: auto;
+    padding: 15px !important;
+    margin-bottom: 25px;
+}
+
+.note-container .color-btn {
+    display: flex;
+    justify-content: space-between;
+}
+
+.note-container .color-btn button {
+    min-width: 75px;
+    border: none;
+}
+
+.note-container button:focus,
+.note-container button:hover,
+.note-container button:active {
+    outline: none;
+    box-shadow: none;
+}
+.note-container .form-group {
+    margin-bottom: 1rem;
+}
+
+.note-container .justify-content-center {
+    -ms-flex-pack: center!important;
+    justify-content: center!important;
+}
+.note-container .row {
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+    margin: 30px 0;
+}
+
+
+.note-container .button {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #2dabf9), color-stop(1, #0688fa));
+    background: -moz-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background: -webkit-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background: -o-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background: -ms-linear-gradient(top, #2dabf9 5%, #0688fa 100%);
+    background: linear-gradient(to bottom, #2dabf9 5%, #0688fa 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#2dabf9', endColorstr='#0688fa', GradientType=0);
+    background-color: #2dabf9;
+    -moz-border-radius: 3px;
+    -webkit-border-radius: 3px;
+    border-radius: 3px;
+    display: inline-block;
+    cursor: pointer;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 15px;
+    padding: 9px 24px;
+    text-decoration: none;
+    border:none;
+    width: 10%;
+    height: 35px;
+    margin: 0 5px;
+}
+
+.note-container .button:hover {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #0688fa), color-stop(1, #2dabf9));
+    background: -moz-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background: -webkit-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background: -o-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background: -ms-linear-gradient(top, #0688fa 5%, #2dabf9 100%);
+    background: linear-gradient(to bottom, #0688fa 5%, #2dabf9 100%);
+    filter: progid: DXImageTransform.Microsoft.gradient(startColorstr='#0688fa', endColorstr='#2dabf9', GradientType=0);
+    background-color: #0688fa;
+}
+
+.note-container .button:active {
+    position: relative;
+    top: 1px;
+}
+
+
+.note-container .left {
+    float: left;
+}
+
+.note-container .right {
+    float: right;
+}
+
+.note-container .clear {
+    clear: both
+}
+
+.note-container .note-box h2,
+p {
+    font-size: 14px;
+    font-weight: normal;
+}
+
+.note-container .note-box ul,
+.note-container li {
+    list-style: none;
+}
+
+.note-container .note-box ul {
+    overflow: hidden;
+    padding: 0em;
+}
+.note-container .note-box ul li
+{
+    padding: 15px;
+}
+.note-container .note-box ul li a {
+    text-decoration: none;
+    color: #000;
+    background-image: linear-gradient(#fff, #ffc);
+    display: block;
+    min-height: 210px;
+    width: 170px;
+    padding: 1px;
+    -moz-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    box-shadow: 10px 10px 7px rgba(0, 0, 0, .7);
+    -webkit-transform: rotate(-6deg);
+    -o-transform: rotate(-6deg);
+    -moz-transform: rotate(-6deg);
+    -moz-transition: -moz-transform .15s linear;
+    -o-transition: -o-transform .15s linear;
+    -webkit-transition: -webkit-transform .15s linear;
+    border-radius: 4px;
+    margin: 10px;
+}
+
+.note-container .note-box ul li:nth-child(even) a {
+    -o-transform: rotate(4deg);
+    -webkit-transform: rotate(4deg);
+    -moz-transform: rotate(4deg);
+    position: relative;
+    top: 5px;
+    background-image: linear-gradient(#fff, #cfc);
+}
+
+.note-container .note-box ul li:nth-child(3n) a {
+    -o-transform: rotate(-3deg);
+    -webkit-transform: rotate(-3deg);
+    -moz-transform: rotate(-3deg);
+    position: relative;
+    top: -5px;
+    background-image: linear-gradient(#fff, #ccf);
+}
+
+.note-container .note-box ul li:nth-child(5n) a {
+    -o-transform: rotate(5deg);
+    -webkit-transform: rotate(5deg);
+    -moz-transform: rotate(5deg);
+    position: relative;
+    top: -10px;
+    background-image: linear-gradient(#fff, #fcf);
+}
+
+.note-container .note-box ul li a:hover,
+.note-container .note-box ul li a:focus {
+    -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, .7);
+    -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, .7);
+    box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, .7);
+    -webkit-transform: scale(1.25);
+    -moz-transform: scale(1.25);
+    -o-transform: scale(1.25);
+    /*border:1px dashed #000;*/
+    position: relative;
+    z-index: 5;
+}
+
+.note-container .note-box ul li {
+    margin: 1em;
+    float: left;
+}
+
+.note-container .note-box ul li h2 {
+    font-size: 110%;
+    font-weight: bold;
+    padding-bottom: 0px;
+    font-family: Oswald;
+    text-align: center;
+    color: #000;
+}
+
+.note-container .note-box ul li p {
+    font-family: 'Shadows Into Light Two', arial, sans-serif;
+    color: #000;
+    padding: 5px 10px;
+}
+
+.note-container .form-control {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    max-width: 80%;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.1);
+}
+
+.note-container .remove-note {
+    float: right;
+    padding: 0px 5px 0 0;
+    font-weight: bold;
+    font-size: 22px;
+    cursor: pointer !important;
+}
+
