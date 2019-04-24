@@ -15,39 +15,36 @@ it is easy to create your own extension.We need to required manifest.json file a
 
 you must create manifest.json file in root directory
 
-manifest.json
 {
+  "manifest_version": 2,
   "name": "Personal Note",
-  "description": "we can save simple note.",
+  "description": "its simple to save note.",
   "version": "1.0",
-  "author": "Ramesh Vaniya",
-
+  "auther":"Ramesh Vaniya",
   "icons": {
-    "32": "icons/icon32x32.png"
-  }, 
-  "browser_action": {
-        "default_title": "Personal Note",
-        "default_icon": {
-          "32": "icons/icon32x32.png",
-          "16": "icons/icon16x16.png",
-          "12": "icons/icon12x12.png"
-        },  
-    "default_popup": "option.html"
+    "64": "icons/icon64x64.png"
   },
-    "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["styles/style.css"],
-      "js": ["scripts/background.js"],
-      "run_at": "document_start"
-    }
-  ],
+  "browser_action": {
+    "default_icon": "icons/icon64x64.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
   "permissions": [
-    "activeTab",
-    “storage”
+    "identity"
   ],
-  "manifest_version": 2
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "client.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key":"extension public key"
 }
+
 <img src="icons/note-screenshot.png"></p>
 
 ## upload extension in your local browser (Google chrome)
@@ -64,9 +61,11 @@ manifest.json
 <img src="settings/firefox-setting1.png"></p>
 
 - installed extension
-<img src="firefox-setting2.png"></p>
+<img src="settings/firefox-setting2.png"></p>
 
 [our extension in firefox store]
 (https://addons.mozilla.org/en-US/firefox/addon/personal-note)
+
+<img src="icons/note-screenshot.png"></p>
 
 [You can check full detail about it. you can open our blog](https://github.com/logisticinfotech/laravel-user-role-base-permision-without-any-package).

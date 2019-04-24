@@ -1,29 +1,28 @@
 {
+  "manifest_version": 2,
   "name": "Personal Note",
-  "description": "we can save simple note.",
+  "description": "its simple to save note.",
   "version": "1.0",
-  "author": "Ramesh Vaniya",
-
   "icons": {
     "64": "icons/icon64x64.png"
-  }, 
-  "browser_action": {
-        "default_title": "Personal Note",
-        "default_icon": {
-          "64": "icons/icon64x64.png"
-        },  
-    "default_popup": "option.html"
   },
-    "content_scripts": [
-    {
-      "matches": ["<all_urls>"],
-      "css": ["styles/style.css"],
-      "run_at": "document_start"
-    }
-  ],
+  "browser_action": {
+    "default_icon": "icons/icon64x64.png",
+    "default_popup": "popup.html"
+  },
+  "background": {
+    "page": "background.html"
+  },
   "permissions": [
-    "activeTab",
-    "storage"
+    "identity"
   ],
-  "manifest_version": 2
+  "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
+  "oauth2": {
+    "client_id": "client_id.apps.googleusercontent.com",
+    "scopes": [
+      "https://www.googleapis.com/auth/userinfo.email",
+      "https://www.googleapis.com/auth/userinfo.profile"
+    ]
+  },
+  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmurudj/UbfZLj8AR4mMFJ3kZCCSk87ht39Sad4+Q7/gPcmKmt8QkRBOUTr8eFNPowa1UC7Zlnj4scioyWZYbDo5jaCCIuPO2AQ9We9Q8Ukzn+CLygIMV0g23vUZX/KVWnWSH89hPyABKnnO2OjH8RH3Ww35QnATpI7KaSDuUAAbMnA63B5R9MqZMzgJ2t01jkW6zgCvCIYDBBKNkHUPIbLAuhwBAHR7XiUaGDJ51BGz1Ef7A9u8qCyTUsCaq5V3UaoMiLFaQbyXcL/vNtREuTX/hgNVpbHrwhKSc5vOlOm3v8UyOKTjheXEjiIZ+782sl9baP/cAxAdbIkQKR+w5UwIDAQAB"
 }

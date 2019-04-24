@@ -4,13 +4,23 @@
       <link href="styles/style.css" rel="stylesheet" />
     </head>
     <body>
-
       <div class="note-container">
+        <div class="syn-status">
+          <div class="left">
+            <img class="logo" src="icons/logo.png" alt="personal note" />
+            <span class="title">Personal Note</span>
+          </div>
+          <div class="syn-status right"><span id="loginUser">Guest </span><button id="syn-button">Login</button></div>
+          <div class="clear"></div>
+        </div>
+
+        
         <div class="container">
+          
             <form id="note-externsion-form" class="row justify-content-center">
                 <div class="col-md-12">
                     <div class="form-group">
-                        <input id="externsion-note-input" type="text" placeholder="Enter note" class="form-control">
+                        <input id="externsion-note-input" type="text" placeholder="Enter Note" class="form-control">
                     </div>
                     <div class="color-btn">
                         <button type="submit" class="button">Save</button>
@@ -20,6 +30,8 @@
             </form>
         </div>
         <div class="container">
+          <center><div class="lds-ripple note-loader hide"><div></div><div></div></div>
+            </center>
             <div class="row">
                 <div class="col-md-12">
                     <div class="note-box clear">
@@ -31,9 +43,9 @@
             </div>
         </div>
       </div>
-
-      <script src="scripts/jquery-3.2.1.slim.min.js"></script>
-      <script src="option.js"></script>
-
+      
+      <script src="scripts/jquery-3.2.1.min.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/5.9.3/firebase.js"></script>
+      <script src="scripts/popup.js"></script>
     </body>
   </html>
