@@ -42,7 +42,7 @@ it is easy to create your own extension.We need to required manifest.json file a
       "https://www.googleapis.com/auth/userinfo.profile"
     ]
   },
-  "key":"extension public key"
+  "key":"google chrome extension public key"
 }
 
 ```
