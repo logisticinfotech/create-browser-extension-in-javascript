@@ -116,7 +116,10 @@ createNote=function(noteId,note)
 
     // create dynamic p element
     var p = $("<p/>");
-    p.text(note);
+    if(note.length>250)
+      p.text(note.substr(0,250)+"...");
+    else
+      p.text(note);
     
     //  create dynamic span element
     var close=$('<span/>');
@@ -127,7 +130,9 @@ createNote=function(noteId,note)
     //create dynamic a element
     var a = $('<a/>');
 
+
     a.append(close);
+    // a.append(sync_icon);
     a.append(p);
 
     li.append(a);
@@ -141,7 +146,6 @@ createNote=function(noteId,note)
 //get notes and create note 
 /////////////////////////////////////////////////////////
 createNoteBox=function(){
-
     $(".note-loader").removeClass('hide');
     $(".note-box").find("ul").empty();
     
@@ -160,7 +164,8 @@ createNoteBox=function(){
     else
     {   
       noteObject=localStorage.getItem('personal-notes');
-
+      // console.log("get personal-notes");
+      // console.log(noteObject);
       if(noteObject)
       {       
         noteObject=JSON.parse(noteObject);      
@@ -210,11 +215,11 @@ syncNotes=function()
             var noteId=noteRef.push(item[noteId], function(response){
               }).key;
             noteObject.push({[noteId]:personalNoteInput.val()});  
+            delete noteLocalObject[index];
           }
         }
       });
     } 
-
     var noteRef = dbRef.child('personal-notes/'+currentLoginUserId); 
     jsonString="";
     localStorage.setItem('personal-notes',[]);
@@ -359,10 +364,11 @@ $('.note-box').on("click",".remove-note",function(){
   });
 
   noteObject=tempObject;
+  
   if(noteObject && (typeof noteObject=='object' && noteObject.length))
   {
     localStorage.setItem("personal-notes",JSON.stringify(noteObject));
-    syncNotes();
+    createNoteBox();
   }
   else
   {

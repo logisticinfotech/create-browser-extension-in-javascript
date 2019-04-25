@@ -14,7 +14,8 @@
     "page": "background.html"
   },
   "permissions": [
-    "identity"
+    "identity",
+    "storage"
   ],
   "content_security_policy":"script-src 'self' https://www.gstatic.com/ https://*.firebaseio.com https://www.googleapis.com; object-src 'self'",
   "oauth2": {
@@ -24,5 +25,5 @@
       "https://www.googleapis.com/auth/userinfo.profile"
     ]
   },
-  "key":"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAmurudj/UbfZLj8AR4mMFJ3kZCCSk87ht39Sad4+Q7/gPcmKmt8QkRBOUTr8eFNPowa1UC7Zlnj4scioyWZYbDo5jaCCIuPO2AQ9We9Q8Ukzn+CLygIMV0g23vUZX/KVWnWSH89hPyABKnnO2OjH8RH3Ww35QnATpI7KaSDuUAAbMnA63B5R9MqZMzgJ2t01jkW6zgCvCIYDBBKNkHUPIbLAuhwBAHR7XiUaGDJ51BGz1Ef7A9u8qCyTUsCaq5V3UaoMiLFaQbyXcL/vNtREuTX/hgNVpbHrwhKSc5vOlOm3v8UyOKTjheXEjiIZ+782sl9baP/cAxAdbIkQKR+w5UwIDAQAB"
+  "key":"extension public key(its required only for google chrome browser in local pc)"
 }

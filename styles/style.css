@@ -216,6 +216,7 @@ p {
 .note-container .note-box ul li {
     margin: 1em;
     float: left;
+    word-break:break-word;
 }
 
 .note-container .note-box ul li h2 {

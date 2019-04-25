@@ -4,15 +4,18 @@ var config = {
   databaseURL: 'extension-237511.firebaseapp.com',
   storageBucket: 'extension-237511.appspot.com'
 };
-firebase.initializeApp(config);
+if(typeof firebase!='undefined')
+{
+	firebase.initializeApp(config);
 
-function initApp() {
-  // Listen for auth state changes.
-  firebase.auth().onAuthStateChanged(function(user) {
-    console.log('User state change detected from the Background script of the Chrome Extension:', user);
-  });
+	function initApp() {
+	  // Listen for auth state changes.
+	  firebase.auth().onAuthStateChanged(function(user) {
+	    console.log('User state change detected from the Background script of the Chrome Extension:', user);
+	  });
+	}
+
+	window.onload = function() {
+	  initApp();
+	};
 }
-
-window.onload = function() {
-  initApp();
-};
