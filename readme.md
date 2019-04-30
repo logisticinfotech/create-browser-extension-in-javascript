@@ -68,4 +68,4 @@ it is easy to create your own extension.We need to required manifest.json file a
 
 <img src="icons/note-screenshot.png"></p>
 
-[You can check full detail about it. you can open our blog](https://www.logisticinfotech.com/blog/handle-different-types-user-role-laravel).
+[You can check full detail about it. you can open our blog](https://www.logisticinfotech.com/blog/how-to-create-browser-extension/).
