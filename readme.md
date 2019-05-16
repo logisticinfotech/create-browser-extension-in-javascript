@@ -1,7 +1,6 @@
-# Please check [this](https://www.logisticinfotech.com/blog/how-to-create-browser-extension/) article for step by step guide. 
+# Browser Extension 
 
-## Personal Note
-<p align="center">  <img src="icons/icon64x64.png"></p>
+Please check [this](https://www.logisticinfotech.com/blog/how-to-create-browser-extension/) article for step by step guide. 
 
 ## How to create browser extension?
 
